@@ -1,0 +1,37 @@
+<header id="header" class="header-transparent">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="{{ .Site.BaseURL }}index.html">Roxx Mixx Duo</a>
+    </div>
+
+    <!-- Navigation links (Desktop) -->
+    <nav class="nav-desktop">
+      <ul class="nav-links">
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#about">About</a></li>
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#languages">Languages</a></li>
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#repertoire">Repertoire</a></li>
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#originals">Our originals</a></li>
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#performances">Performances</a></li>
+        <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#booking" class="btn-nav-cta">Book Us Now</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Overlay Menu -->
+  <nav class="nav-mobile" id="mobile-nav-overlay">
+    <ul class="mobile-links">
+      <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#about" class="mobile-nav-link">About</a></li>
+      <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#languages" class="mobile-nav-link">Languages</a></li>
+      <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#repertoire" class="mobile-nav-link">Repertoire</a></li>
+      <li><a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#performances" class="mobile-nav-link">Performances</a></li>
+      <li><a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener" class="mobile-nav-link btn-mobile-cta">Book Us Now</a></li>
+    </ul>
+  </nav>
+</header>

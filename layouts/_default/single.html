@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="wrapper style5">
+  <div class="inner">
+    <header class="major">
+      <h2>{{ .Title }}</h2>
+      {{ if .Params.description }}
+        <p>{{ .Params.description }}</p>
+      {{ end }}
+    </header>
+
+    <div class="content-box">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

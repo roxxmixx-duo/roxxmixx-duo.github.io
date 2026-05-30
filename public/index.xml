@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Roxx Mixx Duo | Melbourne&#39;s Premier Multilingual Cover Band</title>
+    <link>https://roxxmixx-duo.github.io/</link>
+    <description>Recent content in Home on Roxx Mixx Duo | Melbourne&#39;s Premier Multilingual Cover Band</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://roxxmixx-duo.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elements</title>
+      <link>https://roxxmixx-duo.github.io/elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://roxxmixx-duo.github.io/elements/</guid>
+      <description>&lt;section&gt;&#xA;  &lt;h4&gt;Text&lt;/h4&gt;&#xA;  &lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; and this is &lt;strong&gt;strong&lt;/strong&gt;. This is &lt;i&gt;italic&lt;/i&gt; and this is &lt;em&gt;emphasized&lt;/em&gt;.&#xA;  This is &lt;sup&gt;superscript&lt;/sup&gt; text and this is &lt;sub&gt;subscript&lt;/sub&gt; text.&#xA;  This is &lt;u&gt;underlined&lt;/u&gt; and this is code: &lt;code&gt;for (;;) { ... }&lt;/code&gt;. Finally, &lt;a href=&#34;#&#34;&gt;this is a link&lt;/a&gt;.&lt;/p&gt;&#xA;  &lt;hr /&gt;&#xA;  &lt;header&gt;&#xA;    &lt;h4&gt;Heading with a Subtitle&lt;/h4&gt;&#xA;    &lt;p&gt;Lorem ipsum dolor sit amet nullam id egestas urna aliquam&lt;/p&gt;&#xA;  &lt;/header&gt;&#xA;  &lt;p&gt;Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Generic</title>
+      <link>https://roxxmixx-duo.github.io/generic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://roxxmixx-duo.github.io/generic/</guid>
+      <description>&lt;h3 id=&#34;lorem-ipsum-dolor&#34;&gt;Lorem ipsum dolor&lt;/h3&gt;&#xA;&lt;p&gt;Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

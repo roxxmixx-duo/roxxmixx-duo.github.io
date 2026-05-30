@@ -1,0 +1,2 @@
+Please place your band images (such as banner.jpg, and other assets) inside this static/images/ directory.
+In Hugo, all files placed under the static/ folder are copied directly to the root of the published site, making them available at /images/banner.jpg.

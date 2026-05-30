@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="wrapper style5">
+  <div class="inner">
+    <header class="major">
+      <h2>{{ .Title }}</h2>
+    </header>
+
+    <div class="content-box">
+      {{ .Content }}
+      <ul class="list-pages">
+        {{ range .Pages }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ end }}

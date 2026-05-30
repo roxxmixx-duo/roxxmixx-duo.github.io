@@ -1,0 +1,34 @@
+<footer id="footer">
+  <div class="footer-content">
+    <div class="social-links-grid">
+      {{ if .Site.Params.social.facebook }}
+        <a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
+          <i class="fa fa-facebook-official"></i>
+        </a>
+      {{ end }}
+      {{ if .Site.Params.social.bandcamp }}
+        <a href="{{ .Site.Params.social.bandcamp }}" target="_blank" rel="noopener" aria-label="Bandcamp" class="social-icon">
+          <i class="fa fa-bandcamp"></i>
+        </a>
+      {{ end }}
+      {{ if .Site.Params.social.youtube }}
+        <a href="{{ .Site.Params.social.youtube }}" target="_blank" rel="noopener" aria-label="YouTube" class="social-icon">
+          <i class="fa fa-youtube-play"></i>
+        </a>
+      {{ end }}
+      {{ if .Site.Params.email }}
+        <a href="mailto:{{ .Site.Params.email }}" aria-label="Email" class="social-icon">
+          <i class="fa fa-envelope-o"></i>
+        </a>
+      {{ end }}
+    </div>
+    
+    <div class="footer-contacts">
+      <p>For bookings contact <strong>{{ .Site.Params.contact_person }}</strong>: <a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a> | <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; {{ .Site.Params.first_published }}-{{ now.Format "2006" }} <strong>{{ .Site.Params.owner }}</strong>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,23 @@
+baseURL = "https://roxxmixx-duo.github.io/"
+locale = "en-us"
+title = "Roxx Mixx Duo | Melbourne's Premier Multilingual Cover Band"
+
+[params]
+  description = "Melbourne's premier multilingual cover band playing Rock, Pop, R&B, Jazz, Country, and Bachata in over 18 languages. Over 20 years experience, 600+ songs, and full high-end PA & lighting production included."
+  owner = "Roxx Mixx Duo"
+  first_published = 2017
+  email = "roxxmixx.duo@gmail.com"
+  phone = "0423 761 105"
+  contact_person = "Marie"
+  
+  [params.social]
+    facebook = "https://facebook.com/roxx.mixx.5"
+    bandcamp = "https://roxxmixxduo.bandcamp.com" # Placeholder / default
+    youtube = "https://youtube.com/@roxxmixxduo" # Placeholder / default
+    email = "mailto:roxxmixx.duo@gmail.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
