@@ -1,7 +1,12 @@
 {{ define "main" }}
 
+{{ $banner := resources.Get "images/banner.jpg" }}
+{{ if $banner }}{{ $banner = $banner.Resize "1920x webp" }}{{ end }}
+{{ $heroPhoto := resources.Get "images/roxx-mixx.jpg" }}
+{{ if $heroPhoto }}{{ $heroPhoto = $heroPhoto.Resize "800x webp" }}{{ end }}
+
 <!-- Hero Splash Section -->
-<section id="hero" class="hero-section">
+<section id="hero" class="hero-section"{{ if $banner }} style="background-image: url('{{ $banner.RelPermalink }}')"{{ end }}>
   <div class="hero-bg-overlay"></div>
 
   <!-- Left: Text Content -->
@@ -13,17 +18,19 @@
       <a href="#repertoire" class="btn btn-primary-neon">Explore Repertoire</a>
       <a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener" class="btn btn-secondary-gold">Book Us Now</a>
     </div>
-  </div> 
+  </div>
 
   <!-- Right: Artist Photo -->
   <div class="hero-photo-wrap animate-fade-in">
     <div class="hero-photo-glow"></div>
     <div class="hero-photo-ring"></div>
+    {{ if $heroPhoto }}
     <img
-      src="/images/roxx-mixx.jpg"
+      src="{{ $heroPhoto.RelPermalink }}"
       alt="Roxx Mixx Duo – Raul Roxas &amp; Stifany Chung"
       class="hero-photo-img"
     />
+    {{ end }}
     <div class="hero-photo-fade-left"></div>
     <div class="hero-photo-fade-bottom"></div>
   </div>
@@ -38,35 +45,45 @@
   <div class="container">
     <div class="section-header text-center">
       <span class="sub-heading">Meet the Duo</span>
-      <h2 class="section-title">A Symphony of Talent & Passion</h2>
+      <h2 class="section-title">A symphony of talent & passion</h2>
       <div class="section-divider"></div>
     </div>
     
     <div class="about-grid">
       <div class="about-image-card">
         <div class="about-img-wrapper">
-          <img src="images/banner.jpg" alt="Roxx Mixx Duo Performing Live" class="img-responsive about-img" />
+          {{ $img := resources.Get "images/IMG_5547.jpg" }}
+          {{ if $img }}
+            {{ $img = $img.Resize "800x webp" }}
+            <img src="{{ $img.RelPermalink }}" alt="This is Roxx Mixx Duo performing live" class="img-responsive about-img" />
+          {{ end }}
           <div class="image-overlay-glow"></div>
         </div>
       </div>
       
       <div class="about-text-content">
-        <p class="lead">With over two decades experience, Roxx Mixx have entertained audiences in <strong>Australia, India, Malaysia, and the Philippines</strong>, making them one of Melbourne's most seasoned live acts.</p>
-        
-        <p>TODO: tribute, dedications. Whether it’s a romantic acoustic wedding walk down the aisle, a smooth jazz corporate cocktail hour, or a high-octane rock, pop, and dance floor party, they custom-tailor their performances to deliver the ultimate live soundtrack.</p>
-        
-        <div class="credentials-row">
+        <p class="lead">With over two decades of experience, <strong>Roxx Mixx Duo</strong> has entertained diverse audiences from <strong>Australia, India, Malaysia and the Philippines</strong> making them one of Melbourne's most seasoned and versatile live acts.</p>
+        <p>They bring unmatched energy and a vibrant, multi-genre experience to birthdays, weddings, corporate functions, cultural association events or festivals.</p>
+        <p>Boasting a dynamic global repertoire, their sets span everything from beloved Aussie classics like <strong>"The Nutbush"</strong> or Kylie Minogue's <strong>"Can't Get You Out of My Head"</strong>, to Hindi floor-fillers like Alisha's <strong>"Made in India"</strong>, K-Pop hits like Wonder Girls' <strong>"Nobody"</strong> or the sultry rhythms of Bachata.</p>
+        <p>Whether delivering the latest TikTok viral hits, high-energy Zumba remixes, or heartfelt personal tributes, Roxx Mixx Duo seamlessly adapts to any crowd, setting, or vibe.</p>
+        <p><strong>More than just music. We help run your night:</strong></p>
+        <ul>
+          <li><strong>Seamless Agenda Flow:</strong> We work closely with you to ensure the live music aligns perfectly with your timeline, keeping your entire event running smoothly and on schedule.</li><br>
+          <li><strong>Custom Tributes &amp; Dedications:</strong> We specialize in personalizing your event. Whether that means playing a meaningful tribute song for your foundation or organizing a special dedication for the birthday celebrant.</li><br>
+        </ul>
+        <p><strong>Let us custom-tailor the ultimate live soundtrack to elevate your next occasion!</strong></p>
+      </div>
+    </div>
+    <div class="credentials-row">
           <div class="credential-item">
             <span class="cred-num">20+</span>
             <span class="cred-label">Years of Live Stage Experience</span>
           </div>
           <div class="credential-item">
-            <span class="cred-num">600+</span>
+            <span class="cred-num">800+</span>
             <span class="cred-label">Song Dynamic Repertoire</span>
           </div>
         </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -190,6 +207,36 @@
   </div>
 </section>
 
+<!-- YouTube Shorts Section -->
+<section id="shorts" class="section-padding dark-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Bite-Sized Clips</span>
+      <h2 class="section-title">YouTube Shorts</h2>
+      <p class="section-subtitle">Quick clips from Roxx Mixx Duo.</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="yt-shorts-grid">
+      {{ range hugo.Data.shorts }}
+        <div class="short-card" data-video-id="{{ .id }}">
+          <div class="short-frame short-frame--portrait">
+            <div class="short-thumbnail-wrapper">
+              <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" class="short-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <i class="fa fa-play-circle-o play-icon"></i>
+              </div>
+            </div>
+            <div class="short-details">
+              <h4 class="short-title">{{ .title }}</h4>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
 <!-- Photo Gallery Section -->
 <section id="gallery" class="section-padding midnight-section">
   <div class="container">
@@ -225,7 +272,7 @@
           <i class="fa fa-volume-up"></i>
         </div>
         <h4>Premium PA Sound System</h4>
-        <p>Crystal clear audio custom-sized to suit any venue size, from intimate restaurants and wedding halls to outdoor festivals.</p>
+        <p>Crystal clear audio tailored for any crowd or venue. Whether you’re hosting an intimate wedding reception, a 150 guest birthday celebration, a corporate Christmas party or an outdoor festival.</p>
       </div>
 
       <div class="service-card">
@@ -233,14 +280,14 @@
           <i class="fa fa-sliders"></i>
         </div>
         <h4>Professional Mixing Desk</h4>
-        <p>Live-tuned audio balancing ensuring vocals and instruments sit perfectly in the room acoustic, maintaining comfortable volumes.</p>
+        <p>Live-tuned audio balancing ensuring vocals and instruments sit perfectly in the room acoustics, maintaining comfortable volumes.</p>
       </div>
 
       <div class="service-card">
         <div class="service-icon-box">
           <i class="fa fa-lightbulb-o"></i>
         </div>
-        <h4>Stage Effect Lighting</h4>
+        <h4>Stage Lighting Effects</h4>
         <p>A beautiful visual presence to light up the stage, matching the high energy and colors of the musical vibe.</p>
       </div>
 
@@ -248,8 +295,22 @@
         <div class="service-icon-box">
           <i class="fa fa-microphone"></i>
         </div>
-        <h4>Wireless Microphone Setup</h4>
-        <p>Premium wireless microphones are provided and set up for your guest speeches, wedding vows, and professional MC duties.</p>
+        <h4>Wireless Microphones</h4>
+        <p>Premium wireless microphones are provided for guest speeches, wedding vows or MC duties.</p>
+      </div>
+
+      <div class="service-card"> <div class="service-icon-box">
+          <i class="fa fa-calendar"></i>
+        </div>
+        <h4>Seemless Agenda flow</h4>
+        <p>We work closely with you to ensure the music aligns with your timeline & keeping your event running on schedule.<p>
+      </div>
+
+      <div class="service-card"> <div class="service-icon-box">
+          <i class="fa fa-heart"></i>
+        </div>
+        <h4>Tributes & dedications</h4>
+        <p>We personalize to your event. e.g. tributes to your beloved, singing your associations' anthem or special dedications for the birthday celebrant.</p>
       </div>
     </div>
   </div>
@@ -262,7 +323,7 @@
     <div class="cta-card">
       <span class="cta-subtitle">Secure Your Date</span>
       <h2>Ready to Elevate Your Next Event?</h2>
-      <p>Whether you're organizing a wedding, corporate gala, birthday bash, or local venue booking, secure Melbourne's most versatile, multilingual duo. Get in touch directly on Facebook for custom setlists, direct quotes, and availability.</p>
+      <p>Whether you're organizing a wedding, corporate gala, birthday bash, or local venue secure Melbourne's most versatile, multilingual duo. Get in touch directly on Facebook for custom setlists, direct quotes, and availability.</p>
       
       <div class="cta-details-row">
         <a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener" class="btn btn-cta-pulse">

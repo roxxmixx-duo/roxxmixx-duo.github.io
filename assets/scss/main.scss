@@ -361,7 +361,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   gap: 0;
-  background-image: url('/images/banner.jpg');
   background-size: cover;
   background-position: center top;
   background-attachment: fixed;
@@ -625,7 +624,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 60px;
-  align-items: center;
+  align-items: start;
 }
 
 .about-image-card {
@@ -681,6 +680,9 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 35px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .credential-item {
@@ -688,6 +690,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-glass);
   padding: 20px;
   border-radius: 12px;
+  text-align: center;
 }
 
 .cred-num {
@@ -702,6 +705,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
   color: var(--text-silver);
   font-weight: 500;
+  display: block;
 }
 
 @media (max-width: 991px) {
@@ -1045,6 +1049,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* --- YouTube Shorts Portrait Grid --- */
+.yt-shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.short-frame--portrait {
+  aspect-ratio: 9 / 16;
+}
+
 /* --- Photo Gallery --- */
 .gallery-grid {
   columns: 3;
@@ -1141,8 +1163,16 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Services / Gear Section --- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .service-card {
