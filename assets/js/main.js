@@ -47,10 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('repertoire-search');
   const clearBtn = document.getElementById('search-clear-btn');
   const filterBtns = document.querySelectorAll('.filter-btn');
+  const langFilterBtns = document.querySelectorAll('.lang-filter-btn');
   const songCards = document.querySelectorAll('.song-card');
   const noResultsMsg = document.getElementById('no-results-msg');
 
   let activeGenre = 'all';
+  let activeLanguage = 'all';
   let searchQuery = '';
 
   const filterSongs = () => {
@@ -63,14 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const cardArtist = card.getAttribute('data-artist');
 
       const matchesGenre = (activeGenre === 'all' || cardGenre === activeGenre);
-      
-      const matchesSearch = searchQuery === '' || 
-        cardTitle.includes(searchQuery) || 
+      const matchesLanguage = (activeLanguage === 'all' || cardLanguage === activeLanguage.toLowerCase());
+
+      const matchesSearch = searchQuery === '' ||
+        cardTitle.includes(searchQuery) ||
         cardArtist.includes(searchQuery) ||
         cardLanguage.includes(searchQuery) ||
         cardGenre.toLowerCase().includes(searchQuery);
 
-      if (matchesGenre && matchesSearch) {
+      if (matchesGenre && matchesLanguage && matchesSearch) {
         card.style.display = 'block';
         visibleCount++;
       } else {
@@ -117,6 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       activeGenre = btn.getAttribute('data-filter');
+      filterSongs();
+    });
+  });
+
+  // Event: Language filters clicked
+  langFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      langFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      activeLanguage = btn.getAttribute('data-filter');
       filterSongs();
     });
   });

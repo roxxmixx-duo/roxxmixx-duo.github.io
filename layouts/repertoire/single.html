@@ -1,19 +1,37 @@
 {{ define "main" }}
 
-<section id="repertoire" class="section-padding dark-section" style="padding-top: 140px;">
+<section
+  id="repertoire"
+  class="section-padding dark-section"
+  style="padding-top: 140px"
+>
   <div class="container">
     <div class="section-header text-center">
       <span class="sub-heading">The Backlog</span>
       <h2 class="section-title">Interactive Song Directory</h2>
-      <p class="section-subtitle">Search their massive library of 800+ covers or filter by genre and language to find your favorites.</p>
+      <p class="section-subtitle">
+        Search a sample of their massive library of 800+ covers or filter by
+        genre and language to find your favorites.
+      </p>
       <div class="section-divider"></div>
     </div>
 
     <div class="repertoire-controls">
       <div class="search-bar-wrapper">
         <i class="fa fa-search search-icon"></i>
-        <input type="text" id="repertoire-search" placeholder="Search by song title, artist, language..." aria-label="Search Songs" />
-        <button id="search-clear-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
+        <input
+          type="text"
+          id="repertoire-search"
+          placeholder="Search by song title, artist, language..."
+          aria-label="Search Songs"
+        />
+        <button
+          id="search-clear-btn"
+          class="clear-btn"
+          aria-label="Clear Search"
+        >
+          &times;
+        </button>
       </div>
 
       <div class="filter-categories" id="genre-filters">
@@ -23,27 +41,51 @@
         <button class="filter-btn" data-filter="Jazz">Jazz</button>
         <button class="filter-btn" data-filter="R&B">R&B</button>
         <button class="filter-btn" data-filter="Country">Country</button>
-        <button class="filter-btn" data-filter="Bachata / Latin">Bachata &amp; Latin</button>
+        <button class="filter-btn" data-filter="Bachata / Latin">
+          Bachata &amp; Latin
+        </button>
         <button class="filter-btn" data-filter="Bollywood">Bollywood</button>
         <button class="filter-btn" data-filter="OPM">OPM</button>
+      </div>
+
+      <div class="filter-categories" id="language-filters">
+        <button class="lang-filter-btn active" data-filter="all">
+          All Languages
+        </button>
+        <button class="lang-filter-btn" data-filter="English">English</button>
+        <button class="lang-filter-btn" data-filter="Hindi">Hindi</button>
+        <button class="lang-filter-btn" data-filter="Spanish">Spanish</button>
+        <button class="lang-filter-btn" data-filter="Chinese">Chinese</button>
+        <button class="lang-filter-btn" data-filter="Tagalog">Tagalog</button>
+        <button class="lang-filter-btn" data-filter="Italian">Italian</button>
+        <button class="lang-filter-btn" data-filter="French">French</button>
+        <button class="lang-filter-btn" data-filter="Korean">Korean</button>
+        <button class="lang-filter-btn" data-filter="Japanese">Japanese</button>
       </div>
     </div>
 
     <div class="repertoire-grid" id="repertoire-list">
       {{ range hugo.Data.repertoire }}
-        <div class="song-card" data-genre="{{ .genre }}" data-language="{{ .language }}" data-title="{{ .title | lower }}" data-artist="{{ .artist | lower }}">
-          <div class="song-header">
-            <span class="song-badge-genre">{{ .genre }}</span>
-            <span class="song-badge-lang">{{ .language }}</span>
-          </div>
-          <h4 class="song-title">{{ .title }}</h4>
-          <p class="song-artist">{{ .artist }}</p>
+      <div
+        class="song-card"
+        data-genre="{{ .genre }}"
+        data-language="{{ .language }}"
+        data-title="{{ .title | lower }}"
+        data-artist="{{ .artist | lower }}"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">{{ .genre }}</span>
+          <span class="song-badge-lang">{{ .language }}</span>
         </div>
+        <h4 class="song-title">{{ .title }}</h4>
+        <p class="song-artist">{{ .artist }}</p>
+      </div>
       {{ end }}
     </div>
 
-    <div id="no-results-msg" class="no-results-alert" style="display: none;">
-      <i class="fa fa-exclamation-circle"></i> No matching songs found. Try adjusting your search query or filters!
+    <div id="no-results-msg" class="no-results-alert" style="display: none">
+      <i class="fa fa-exclamation-circle"></i> No matching songs found. Try
+      adjusting your search query or filters!
     </div>
   </div>
 </section>

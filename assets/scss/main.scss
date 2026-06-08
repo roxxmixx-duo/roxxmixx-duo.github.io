@@ -858,7 +858,8 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.filter-btn {
+.filter-btn,
+.lang-filter-btn {
   background: var(--bg-dark);
   border: 1px solid var(--border-glass);
   color: var(--text-silver);
@@ -871,12 +872,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+.lang-filter-btn:hover {
   border-color: var(--purple-neon);
   color: var(--text-white);
 }
 
-.filter-btn.active {
+.filter-btn.active,
+.lang-filter-btn.active {
   background: var(--purple-neon);
   border-color: var(--purple-neon);
   color: var(--text-white);

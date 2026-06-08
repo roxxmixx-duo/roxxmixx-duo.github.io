@@ -16,11 +16,11 @@
 
   
   
-  <link rel="stylesheet" href="/scss/main.min.25a23a443c33720e5e1d2d2b2f3eb8477dcf94d4f31653c371fa29b0428c783a.css" integrity="sha256-JaI6RDwzcg5eHS0rLz64R33PlNTzFlPDcfopsEKMeDo=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/scss/main.min.1db40cdd64cf635b0c7ef14f6744c11e86a096695402746622931940089b3de5.css" integrity="sha256-HbQM3WTPY1sMfvFPZ0TBHoaglmlUAnRmIpMZQAibPeU=" crossorigin="anonymous" />
 
   
   
-  <script src="/js/main.min.463445935d735c203dfa836d61df65cfc89a7583fa68b2208d2b466d54c4dc53.js" integrity="sha256-RjRFk11zXCA9&#43;oNtYd9lz8iadYP6aLIgjStGbVTE3FM=" crossorigin="anonymous" defer></script>
+  <script src="/js/main.min.e6a36e8e55937794a95eaff718c114e939bbfe8d5f8d71a7f9d680af32c7659b.js" integrity="sha256-5qNujlWTd5SpXq/3GMEU6Tm7/o1fjXGn&#43;daArzLHZZs=" crossorigin="anonymous" defer></script>
 
   
   <script type="application/ld+json">
@@ -179,20 +179,38 @@
       <main id="main">
         
 
-<section id="repertoire" class="section-padding dark-section" style="padding-top: 140px;">
+<section
+  id="repertoire"
+  class="section-padding dark-section"
+  style="padding-top: 140px"
+>
   <div class="container">
     <div class="section-header text-center">
       <span class="sub-heading">The Backlog</span>
       <h2 class="section-title">Interactive Song Directory</h2>
-      <p class="section-subtitle">Search their massive library of 800+ covers or filter by genre and language to find your favorites.</p>
+      <p class="section-subtitle">
+        Search a sample of their massive library of 800+ covers or filter by
+        genre and language to find your favorites.
+      </p>
       <div class="section-divider"></div>
     </div>
 
     <div class="repertoire-controls">
       <div class="search-bar-wrapper">
         <i class="fa fa-search search-icon"></i>
-        <input type="text" id="repertoire-search" placeholder="Search by song title, artist, language..." aria-label="Search Songs" />
-        <button id="search-clear-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
+        <input
+          type="text"
+          id="repertoire-search"
+          placeholder="Search by song title, artist, language..."
+          aria-label="Search Songs"
+        />
+        <button
+          id="search-clear-btn"
+          class="clear-btn"
+          aria-label="Clear Search"
+        >
+          &times;
+        </button>
       </div>
 
       <div class="filter-categories" id="genre-filters">
@@ -202,558 +220,846 @@
         <button class="filter-btn" data-filter="Jazz">Jazz</button>
         <button class="filter-btn" data-filter="R&B">R&B</button>
         <button class="filter-btn" data-filter="Country">Country</button>
-        <button class="filter-btn" data-filter="Bachata / Latin">Bachata &amp; Latin</button>
+        <button class="filter-btn" data-filter="Bachata / Latin">
+          Bachata &amp; Latin
+        </button>
         <button class="filter-btn" data-filter="Bollywood">Bollywood</button>
         <button class="filter-btn" data-filter="OPM">OPM</button>
+      </div>
+
+      <div class="filter-categories" id="language-filters">
+        <button class="lang-filter-btn active" data-filter="all">
+          All Languages
+        </button>
+        <button class="lang-filter-btn" data-filter="English">English</button>
+        <button class="lang-filter-btn" data-filter="Hindi">Hindi</button>
+        <button class="lang-filter-btn" data-filter="Spanish">Spanish</button>
+        <button class="lang-filter-btn" data-filter="Chinese">Chinese</button>
+        <button class="lang-filter-btn" data-filter="Tagalog">Tagalog</button>
+        <button class="lang-filter-btn" data-filter="Italian">Italian</button>
+        <button class="lang-filter-btn" data-filter="French">French</button>
+        <button class="lang-filter-btn" data-filter="Korean">Korean</button>
+        <button class="lang-filter-btn" data-filter="Japanese">Japanese</button>
       </div>
     </div>
 
     <div class="repertoire-grid" id="repertoire-list">
       
-        <div class="song-card" data-genre="Bachata / Latin" data-language="Spanish" data-title="la bamba" data-artist="ritchie valens">
-          <div class="song-header">
-            <span class="song-badge-genre">Bachata / Latin</span>
-            <span class="song-badge-lang">Spanish</span>
-          </div>
-          <h4 class="song-title">La Bamba</h4>
-          <p class="song-artist">Ritchie Valens</p>
+      <div
+        class="song-card"
+        data-genre="Latin"
+        data-language="Spanish"
+        data-title="la bamba"
+        data-artist="ritchie valens"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Latin</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">La Bamba</h4>
+        <p class="song-artist">Ritchie Valens</p>
+      </div>
       
-        <div class="song-card" data-genre="Bachata / Latin" data-language="Spanish" data-title="despacito" data-artist="luis fonsi ft. daddy yankee">
-          <div class="song-header">
-            <span class="song-badge-genre">Bachata / Latin</span>
-            <span class="song-badge-lang">Spanish</span>
-          </div>
-          <h4 class="song-title">Despacito</h4>
-          <p class="song-artist">Luis Fonsi ft. Daddy Yankee</p>
+      <div
+        class="song-card"
+        data-genre="Reggaeton"
+        data-language="Spanish"
+        data-title="despacito"
+        data-artist="luis fonsi ft. daddy yankee"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Reggaeton</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">Despacito</h4>
+        <p class="song-artist">Luis Fonsi ft. Daddy Yankee</p>
+      </div>
       
-        <div class="song-card" data-genre="Bachata / Latin" data-language="Spanish" data-title="bailando" data-artist="enrique iglesias">
-          <div class="song-header">
-            <span class="song-badge-genre">Bachata / Latin</span>
-            <span class="song-badge-lang">Spanish</span>
-          </div>
-          <h4 class="song-title">Bailando</h4>
-          <p class="song-artist">Enrique Iglesias</p>
+      <div
+        class="song-card"
+        data-genre="Bachata / Latin"
+        data-language="Spanish"
+        data-title="bailando"
+        data-artist="enrique iglesias"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bachata / Latin</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">Bailando</h4>
+        <p class="song-artist">Enrique Iglesias</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Mandarin" data-title="the moon represents my heart (yue liang dai biao wo de xin)" data-artist="teresa teng">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Mandarin</span>
-          </div>
-          <h4 class="song-title">The Moon Represents My Heart (Yue Liang Dai Biao Wo De Xin)</h4>
-          <p class="song-artist">Teresa Teng</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Chinese"
+        data-title="the moon represents my heart"
+        data-artist="teresa teng"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Chinese</span>
         </div>
+        <h4 class="song-title">The Moon Represents My Heart</h4>
+        <p class="song-artist">Teresa Teng</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Mandarin" data-title="tian mi mi" data-artist="teresa teng">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Mandarin</span>
-          </div>
-          <h4 class="song-title">Tian Mi Mi</h4>
-          <p class="song-artist">Teresa Teng</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Chinese"
+        data-title="tian mi mi"
+        data-artist="teresa teng"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Chinese</span>
         </div>
+        <h4 class="song-title">Tian Mi Mi</h4>
+        <p class="song-artist">Teresa Teng</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="Cantonese" data-title="hai kuo tian kong (boundless oceans, vast skies)" data-artist="beyond">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">Cantonese</span>
-          </div>
-          <h4 class="song-title">Hai Kuo Tian Kong (Boundless Oceans, Vast Skies)</h4>
-          <p class="song-artist">Beyond</p>
+      <div
+        class="song-card"
+        data-genre="Bollywood"
+        data-language="Hindi"
+        data-title="yeh mera dil yaar ka diwana"
+        data-artist="asha bhosle"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bollywood</span>
+          <span class="song-badge-lang">Hindi</span>
         </div>
+        <h4 class="song-title">Yeh mera dil yaar ka diwana</h4>
+        <p class="song-artist">Asha Bhosle</p>
+      </div>
       
-        <div class="song-card" data-genre="Bollywood" data-language="Hindi" data-title="tujhe dekha to" data-artist="kumar sanu &amp; lata mangeshkar">
-          <div class="song-header">
-            <span class="song-badge-genre">Bollywood</span>
-            <span class="song-badge-lang">Hindi</span>
-          </div>
-          <h4 class="song-title">Tujhe Dekha To</h4>
-          <p class="song-artist">Kumar Sanu &amp; Lata Mangeshkar</p>
+      <div
+        class="song-card"
+        data-genre="Bollywood"
+        data-language="Hindi"
+        data-title="ye raat mein jo maza hai yeh kuchh naya"
+        data-artist="salma agha"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bollywood</span>
+          <span class="song-badge-lang">Hindi</span>
         </div>
+        <h4 class="song-title">Ye raat mein jo maza hai yeh kuchh naya</h4>
+        <p class="song-artist">Salma Agha</p>
+      </div>
       
-        <div class="song-card" data-genre="Bollywood" data-language="Hindi" data-title="chaiyya chaiyya" data-artist="sukhwinder singh &amp; sapna awasthi">
-          <div class="song-header">
-            <span class="song-badge-genre">Bollywood</span>
-            <span class="song-badge-lang">Hindi</span>
-          </div>
-          <h4 class="song-title">Chaiyya Chaiyya</h4>
-          <p class="song-artist">Sukhwinder Singh &amp; Sapna Awasthi</p>
+      <div
+        class="song-card"
+        data-genre="Bollywood"
+        data-language="Hindi"
+        data-title="made in india"
+        data-artist="alisha chinai"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bollywood</span>
+          <span class="song-badge-lang">Hindi</span>
         </div>
+        <h4 class="song-title">Made in India</h4>
+        <p class="song-artist">Alisha Chinai</p>
+      </div>
       
-        <div class="song-card" data-genre="Bollywood" data-language="Hindi" data-title="tum hi ho" data-artist="arijit singh">
-          <div class="song-header">
-            <span class="song-badge-genre">Bollywood</span>
-            <span class="song-badge-lang">Hindi</span>
-          </div>
-          <h4 class="song-title">Tum Hi Ho</h4>
-          <p class="song-artist">Arijit Singh</p>
+      <div
+        class="song-card"
+        data-genre="OPM"
+        data-language="Tagalog"
+        data-title="tayo&#39;y magsayawan "
+        data-artist="vst &amp; company"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">OPM</span>
+          <span class="song-badge-lang">Tagalog</span>
         </div>
+        <h4 class="song-title">Tayo&#39;y Magsayawan </h4>
+        <p class="song-artist">VST &amp; Company</p>
+      </div>
       
-        <div class="song-card" data-genre="OPM" data-language="Tagalog" data-title="anak" data-artist="freddie aguilar">
-          <div class="song-header">
-            <span class="song-badge-genre">OPM</span>
-            <span class="song-badge-lang">Tagalog</span>
-          </div>
-          <h4 class="song-title">Anak</h4>
-          <p class="song-artist">Freddie Aguilar</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="opalite"
+        data-artist="taylor swift"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Opalite</h4>
+        <p class="song-artist">Taylor Swift</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="Tagalog" data-title="ang huling el bimbo" data-artist="eraserheads">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">Tagalog</span>
-          </div>
-          <h4 class="song-title">Ang Huling El Bimbo</h4>
-          <p class="song-artist">Eraserheads</p>
+      <div
+        class="song-card"
+        data-genre="Disco funk"
+        data-language="Englih"
+        data-title="i just might"
+        data-artist="bruno mars"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Disco funk</span>
+          <span class="song-badge-lang">Englih</span>
         </div>
+        <h4 class="song-title">I just might</h4>
+        <p class="song-artist">Bruno Mars</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="Tagalog" data-title="tadhana" data-artist="up dharma down">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">Tagalog</span>
-          </div>
-          <h4 class="song-title">Tadhana</h4>
-          <p class="song-artist">Up Dharma Down</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Korean"
+        data-title="gangham style"
+        data-artist="psy"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Korean</span>
         </div>
+        <h4 class="song-title">Gangham style</h4>
+        <p class="song-artist">Psy</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Japanese" data-title="first love" data-artist="hikaru utada">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Japanese</span>
-          </div>
-          <h4 class="song-title">First Love</h4>
-          <p class="song-artist">Hikaru Utada</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Japanese"
+        data-title="voltes 5"
+        data-artist="mitsuko horie"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Japanese</span>
         </div>
+        <h4 class="song-title">Voltes 5</h4>
+        <p class="song-artist">Mitsuko Horie</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Japanese" data-title="dry flower" data-artist="yuuri">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Japanese</span>
-          </div>
-          <h4 class="song-title">Dry Flower</h4>
-          <p class="song-artist">Yuuri</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Korean"
+        data-title="nobody"
+        data-artist="nobody"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Korean</span>
         </div>
+        <h4 class="song-title">Nobody</h4>
+        <p class="song-artist">Nobody</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Korean" data-title="dynamite" data-artist="bts">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Korean</span>
-          </div>
-          <h4 class="song-title">Dynamite</h4>
-          <p class="song-artist">BTS</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Korean"
+        data-title="apt"
+        data-artist="rose &amp; bruno mars"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Korean</span>
         </div>
+        <h4 class="song-title">Apt</h4>
+        <p class="song-artist">Rose &amp; Bruno Mars</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Italian" data-title="bella ciao" data-artist="traditional">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Italian</span>
-          </div>
-          <h4 class="song-title">Bella Ciao</h4>
-          <p class="song-artist">Traditional</p>
+      <div
+        class="song-card"
+        data-genre="OPM"
+        data-language="Tagalog"
+        data-title="buksan mo"
+        data-artist="willie revillame"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">OPM</span>
+          <span class="song-badge-lang">Tagalog</span>
         </div>
+        <h4 class="song-title">Buksan mo</h4>
+        <p class="song-artist">Willie Revillame</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="Italian" data-title="volare" data-artist="domenico modugno">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">Italian</span>
-          </div>
-          <h4 class="song-title">Volare</h4>
-          <p class="song-artist">Domenico Modugno</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Italian"
+        data-title="bella ciao"
+        data-artist="traditional"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Italian</span>
         </div>
+        <h4 class="song-title">Bella Ciao</h4>
+        <p class="song-artist">Traditional</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Sri Lankan" data-title="suraangana" data-artist="traditional">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Sri Lankan</span>
-          </div>
-          <h4 class="song-title">Suraangana</h4>
-          <p class="song-artist">Traditional</p>
+      <div
+        class="song-card"
+        data-genre="Jazz"
+        data-language="Italian"
+        data-title="volare"
+        data-artist="domenico modugno"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Jazz</span>
+          <span class="song-badge-lang">Italian</span>
         </div>
+        <h4 class="song-title">Volare</h4>
+        <p class="song-artist">Domenico Modugno</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="Malaysian" data-title="madu dan kaca" data-artist="inka christie">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">Malaysian</span>
-          </div>
-          <h4 class="song-title">Madu Dan Kaca</h4>
-          <p class="song-artist">Inka Christie</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Sri Lankan"
+        data-title="piyumehi pani bothi"
+        data-artist="ct fernando"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Sri Lankan</span>
         </div>
+        <h4 class="song-title">Piyumehi pani bothi</h4>
+        <p class="song-artist">CT Fernando</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Indonesian" data-title="mimpi sedih" data-artist="koes plus">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Indonesian</span>
-          </div>
-          <h4 class="song-title">Mimpi Sedih</h4>
-          <p class="song-artist">Koes Plus</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Turkish"
+        data-title="bir sans daha"
+        data-artist="cansever"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Turkish</span>
         </div>
+        <h4 class="song-title">Bir Sans Daha</h4>
+        <p class="song-artist">Cansever</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Turkish" data-title="şımarık (kiss kiss)" data-artist="tarkan">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Turkish</span>
-          </div>
-          <h4 class="song-title">Şımarık (Kiss Kiss)</h4>
-          <p class="song-artist">Tarkan</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="French"
+        data-title="comment ca va"
+        data-artist="the shorts"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">French</span>
         </div>
+        <h4 class="song-title">Comment ca va</h4>
+        <p class="song-artist">The Shorts</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="French" data-title="la vie en rose" data-artist="édith piaf">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">French</span>
-          </div>
-          <h4 class="song-title">La Vie En Rose</h4>
-          <p class="song-artist">Édith Piaf</p>
+      <div
+        class="song-card"
+        data-genre="Rock"
+        data-language="English"
+        data-title="hotel california"
+        data-artist="eagles"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Rock</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Hotel California</h4>
+        <p class="song-artist">Eagles</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="Portuguese" data-title="garota de ipanema (the girl from ipanema)" data-artist="antônio carlos jobim">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">Portuguese</span>
-          </div>
-          <h4 class="song-title">Garota de Ipanema (The Girl from Ipanema)</h4>
-          <p class="song-artist">Antônio Carlos Jobim</p>
+      <div
+        class="song-card"
+        data-genre="Rock"
+        data-language="English"
+        data-title="separate ways"
+        data-artist="journey"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Rock</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Separate ways</h4>
+        <p class="song-artist">Journey</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="hotel california" data-artist="eagles">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Hotel California</h4>
-          <p class="song-artist">Eagles</p>
+      <div
+        class="song-card"
+        data-genre="Rock"
+        data-language="English"
+        data-title="open arms"
+        data-artist="journey"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Rock</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Open arms</h4>
+        <p class="song-artist">Journey</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="sweet child o&#39; mine" data-artist="guns n&#39; roses">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Sweet Child O&#39; Mine</h4>
-          <p class="song-artist">Guns N&#39; Roses</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="perfect"
+        data-artist="ed sheeran"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Perfect</h4>
+        <p class="song-artist">Ed Sheeran</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="livin&#39; on a prayer" data-artist="bon jovi">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Livin&#39; On A Prayer</h4>
-          <p class="song-artist">Bon Jovi</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="uptown funk"
+        data-artist="mark ronson ft. bruno mars"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Uptown Funk</h4>
+        <p class="song-artist">Mark Ronson ft. Bruno Mars</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="don&#39;t stop believin&#39;" data-artist="journey">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Don&#39;t Stop Believin&#39;</h4>
-          <p class="song-artist">Journey</p>
+      <div
+        class="song-card"
+        data-genre="Jazz"
+        data-language="English"
+        data-title="fly me to the moon"
+        data-artist="frank sinatra"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Jazz</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Fly Me to the Moon</h4>
+        <p class="song-artist">Frank Sinatra</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="perfect" data-artist="ed sheeran">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Perfect</h4>
-          <p class="song-artist">Ed Sheeran</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="take me home, country roads"
+        data-artist="john denver"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Take Me Home, Country Roads</h4>
+        <p class="song-artist">John Denver</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="shape of you" data-artist="ed sheeran">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Shape of You</h4>
-          <p class="song-artist">Ed Sheeran</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="jolene"
+        data-artist="dolly parton"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Jolene</h4>
+        <p class="song-artist">Dolly Parton</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="billie jean" data-artist="michael jackson">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Billie Jean</h4>
-          <p class="song-artist">Michael Jackson</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="islands in the stream"
+        data-artist="dolly parton &amp; kenny rogers"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Islands in the stream</h4>
+        <p class="song-artist">Dolly Parton &amp; Kenny Rogers</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="uptown funk" data-artist="mark ronson ft. bruno mars">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Uptown Funk</h4>
-          <p class="song-artist">Mark Ronson ft. Bruno Mars</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="man! i feel like a woman!"
+        data-artist="shania twain"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Man! I Feel Like a Woman!</h4>
+        <p class="song-artist">Shania Twain</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="English" data-title="fly me to the moon" data-artist="frank sinatra">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Fly Me to the Moon</h4>
-          <p class="song-artist">Frank Sinatra</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="up where we belong"
+        data-artist="joe cocker, jennifer warnes"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Up where we belong</h4>
+        <p class="song-artist">Joe Cocker, Jennifer Warnes</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="take me home, country roads" data-artist="john denver">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Take Me Home, Country Roads</h4>
-          <p class="song-artist">John Denver</p>
+      <div
+        class="song-card"
+        data-genre="R&amp;B"
+        data-language="English"
+        data-title="tonight i celebrate my love for you"
+        data-artist="peabo bryson &amp; roberta flack"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">R&amp;B</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Tonight I celebrate my love for you</h4>
+        <p class="song-artist">Peabo Bryson &amp; Roberta Flack</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="jolene" data-artist="dolly parton">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Jolene</h4>
-          <p class="song-artist">Dolly Parton</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="stand by me"
+        data-artist="ben e. king"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Stand by Me</h4>
+        <p class="song-artist">Ben E. King</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="tennessee whiskey" data-artist="chris stapleton">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Tennessee Whiskey</h4>
-          <p class="song-artist">Chris Stapleton</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="dancing queen"
+        data-artist="abba"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Dancing Queen</h4>
+        <p class="song-artist">ABBA</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="man! i feel like a woman!" data-artist="shania twain">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Man! I Feel Like a Woman!</h4>
-          <p class="song-artist">Shania Twain</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="crazy"
+        data-artist="patsy cline"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Crazy</h4>
+        <p class="song-artist">Patsy Cline</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="i will always love you" data-artist="whitney houston">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">I Will Always Love You</h4>
-          <p class="song-artist">Whitney Houston</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="rolling in the deep"
+        data-artist="adele"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Rolling in the Deep</h4>
+        <p class="song-artist">Adele</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="respect" data-artist="aretha franklin">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Respect</h4>
-          <p class="song-artist">Aretha Franklin</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="nothing&#39;s gonna stop us"
+        data-artist="starship"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Nothing&#39;s gonna stop us</h4>
+        <p class="song-artist">Starship</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="superstition" data-artist="stevie wonder">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Superstition</h4>
-          <p class="song-artist">Stevie Wonder</p>
+      <div
+        class="song-card"
+        data-genre="Country"
+        data-language="English"
+        data-title="you&#39;re still the one"
+        data-artist="shania twain"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Country</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">You&#39;re Still the One</h4>
+        <p class="song-artist">Shania Twain</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="if i ain&#39;t got you" data-artist="alicia keys">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">If I Ain&#39;t Got You</h4>
-          <p class="song-artist">Alicia Keys</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="i want it that way"
+        data-artist="backstreet boys"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">I Want It That Way</h4>
+        <p class="song-artist">Backstreet Boys</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="stand by me" data-artist="ben e. king">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Stand by Me</h4>
-          <p class="song-artist">Ben E. King</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="girls just wanna have fun"
+        data-artist="cyndi lauper"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Girls just wanna have fun</h4>
+        <p class="song-artist">Cyndi Lauper</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="dancing queen" data-artist="abba">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Dancing Queen</h4>
-          <p class="song-artist">ABBA</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="on the floor"
+        data-artist="jennifer lopez"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">On the floor</h4>
+        <p class="song-artist">Jennifer Lopez</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="can&#39;t help falling in love" data-artist="elvis presley">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Can&#39;t Help Falling in Love</h4>
-          <p class="song-artist">Elvis Presley</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="sway"
+        data-artist="pussy cat dolls"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Sway</h4>
+        <p class="song-artist">Pussy cat dolls</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="wonderwall" data-artist="oasis">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Wonderwall</h4>
-          <p class="song-artist">Oasis</p>
+      <div
+        class="song-card"
+        data-genre="Rock"
+        data-language="English"
+        data-title="nutbush city limits"
+        data-artist="tina turner"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Rock</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Nutbush city limits</h4>
+        <p class="song-artist">Tina Turner</p>
+      </div>
       
-        <div class="song-card" data-genre="Rock" data-language="English" data-title="zombie" data-artist="the cranberries">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Zombie</h4>
-          <p class="song-artist">The Cranberries</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="English"
+        data-title="we like to party"
+        data-artist="venga boys"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">We like to party</h4>
+        <p class="song-artist">Venga boys</p>
+      </div>
       
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="crazy" data-artist="gnarls barkley">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Crazy</h4>
-          <p class="song-artist">Gnarls Barkley</p>
+      <div
+        class="song-card"
+        data-genre="Rock"
+        data-language="English"
+        data-title="simply the best"
+        data-artist="tina turner"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Rock</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Simply the best</h4>
+        <p class="song-artist">Tina Turner</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="rolling in the deep" data-artist="adele">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Rolling in the Deep</h4>
-          <p class="song-artist">Adele</p>
+      <div
+        class="song-card"
+        data-genre="OPM"
+        data-language="Tagalog"
+        data-title="luha"
+        data-artist="aegis band"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">OPM</span>
+          <span class="song-badge-lang">Tagalog</span>
         </div>
+        <h4 class="song-title">Luha</h4>
+        <p class="song-artist">Aegis Band</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="English" data-title="can&#39;t take my eyes off you" data-artist="frankie valli">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Can&#39;t Take My Eyes Off You</h4>
-          <p class="song-artist">Frankie Valli</p>
+      <div
+        class="song-card"
+        data-genre="Pop"
+        data-language="Spanish"
+        data-title="macarena"
+        data-artist="los del rio"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Pop</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">Macarena</h4>
+        <p class="song-artist">Los del rio</p>
+      </div>
       
-        <div class="song-card" data-genre="Jazz" data-language="English" data-title="smooth operator" data-artist="sade">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Smooth Operator</h4>
-          <p class="song-artist">Sade</p>
+      <div
+        class="song-card"
+        data-genre="Bachata / Latin"
+        data-language="Spanish"
+        data-title="de javu"
+        data-artist="shakira &amp; royce"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bachata / Latin</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">De Javu</h4>
+        <p class="song-artist">Shakira &amp; Royce</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="you&#39;re still the one" data-artist="shania twain">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">You&#39;re Still the One</h4>
-          <p class="song-artist">Shania Twain</p>
+      <div
+        class="song-card"
+        data-genre="Bachata / Latin"
+        data-language="Spanish"
+        data-title="el canto dela sirena"
+        data-artist="dama"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bachata / Latin</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">El canto dela sirena</h4>
+        <p class="song-artist">Dama</p>
+      </div>
       
-        <div class="song-card" data-genre="Country" data-language="English" data-title="before he cheats" data-artist="carrie underwood">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Before He Cheats</h4>
-          <p class="song-artist">Carrie Underwood</p>
+      <div
+        class="song-card"
+        data-genre="Bachata / Latin"
+        data-language="Spanish"
+        data-title="odio no odiarte"
+        data-artist="leslie grace"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">Bachata / Latin</span>
+          <span class="song-badge-lang">Spanish</span>
         </div>
+        <h4 class="song-title">Odio no odiarte</h4>
+        <p class="song-artist">Leslie Grace</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="English" data-title="i want it that way" data-artist="backstreet boys">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">I Want It That Way</h4>
-          <p class="song-artist">Backstreet Boys</p>
+      <div
+        class="song-card"
+        data-genre="R&amp;B"
+        data-language="English"
+        data-title="mustang sally"
+        data-artist="wilson picket"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">R&amp;B</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">Mustang Sally</h4>
+        <p class="song-artist">Wilson Picket</p>
+      </div>
       
-        <div class="song-card" data-genre="Pop" data-language="Mandarin" data-title="zui hou de wen teng (the last gentle warmth)" data-artist="chou chuan-huing">
-          <div class="song-header">
-            <span class="song-badge-genre">Pop</span>
-            <span class="song-badge-lang">Mandarin</span>
-          </div>
-          <h4 class="song-title">Zui Hou De Wen Teng (The Last Gentle Warmth)</h4>
-          <p class="song-artist">Chou Chuan-huing</p>
+      <div
+        class="song-card"
+        data-genre="R&amp;B"
+        data-language="English"
+        data-title="l-l-lies"
+        data-artist="diana king"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">R&amp;B</span>
+          <span class="song-badge-lang">English</span>
         </div>
+        <h4 class="song-title">L-l-lies</h4>
+        <p class="song-artist">Diana King</p>
+      </div>
       
-        <div class="song-card" data-genre="Bollywood" data-language="Hindi" data-title="kal ho naa ho" data-artist="sonu nigam">
-          <div class="song-header">
-            <span class="song-badge-genre">Bollywood</span>
-            <span class="song-badge-lang">Hindi</span>
-          </div>
-          <h4 class="song-title">Kal Ho Naa Ho</h4>
-          <p class="song-artist">Sonu Nigam</p>
+      <div
+        class="song-card"
+        data-genre="R&amp;B"
+        data-language="English"
+        data-title="family affair"
+        data-artist="mary j blige"
+      >
+        <div class="song-header">
+          <span class="song-badge-genre">R&amp;B</span>
+          <span class="song-badge-lang">English</span>
         </div>
-      
-        <div class="song-card" data-genre="Rock" data-language="Tagalog" data-title="huling sandali" data-artist="december avenue">
-          <div class="song-header">
-            <span class="song-badge-genre">Rock</span>
-            <span class="song-badge-lang">Tagalog</span>
-          </div>
-          <h4 class="song-title">Huling Sandali</h4>
-          <p class="song-artist">December Avenue</p>
-        </div>
-      
-        <div class="song-card" data-genre="R&amp;B" data-language="English" data-title="lately" data-artist="stevie wonder">
-          <div class="song-header">
-            <span class="song-badge-genre">R&amp;B</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Lately</h4>
-          <p class="song-artist">Stevie Wonder</p>
-        </div>
-      
-        <div class="song-card" data-genre="Bachata / Latin" data-language="Spanish" data-title="chan chan" data-artist="buena vista social club">
-          <div class="song-header">
-            <span class="song-badge-genre">Bachata / Latin</span>
-            <span class="song-badge-lang">Spanish</span>
-          </div>
-          <h4 class="song-title">Chan Chan</h4>
-          <p class="song-artist">Buena Vista Social Club</p>
-        </div>
-      
-        <div class="song-card" data-genre="Jazz" data-language="French" data-title="je veux" data-artist="zaz">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">French</span>
-          </div>
-          <h4 class="song-title">Je Veux</h4>
-          <p class="song-artist">Zaz</p>
-        </div>
-      
-        <div class="song-card" data-genre="Jazz" data-language="English" data-title="autumn leaves" data-artist="joseph kosma">
-          <div class="song-header">
-            <span class="song-badge-genre">Jazz</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Autumn Leaves</h4>
-          <p class="song-artist">Joseph Kosma</p>
-        </div>
-      
-        <div class="song-card" data-genre="Country" data-language="English" data-title="ring of fire" data-artist="johnny cash">
-          <div class="song-header">
-            <span class="song-badge-genre">Country</span>
-            <span class="song-badge-lang">English</span>
-          </div>
-          <h4 class="song-title">Ring of Fire</h4>
-          <p class="song-artist">Johnny Cash</p>
-        </div>
+        <h4 class="song-title">Family affair</h4>
+        <p class="song-artist">Mary J Blige</p>
+      </div>
       
     </div>
 
-    <div id="no-results-msg" class="no-results-alert" style="display: none;">
-      <i class="fa fa-exclamation-circle"></i> No matching songs found. Try adjusting your search query or filters!
+    <div id="no-results-msg" class="no-results-alert" style="display: none">
+      <i class="fa fa-exclamation-circle"></i> No matching songs found. Try
+      adjusting your search query or filters!
     </div>
   </div>
 </section>
