@@ -1,0 +1,21 @@
+{{ define "main" }}
+
+<section id="gallery" class="section-padding midnight-section" style="padding-top: 140px;">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Behind the Scenes</span>
+      <h2 class="section-title">Photo Gallery</h2>
+      <p class="section-subtitle">Moments captured from our performances and events.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-grid">
+      {{ range hugo.Data.gallery }}
+        <div class="gallery-item">
+          <img src="/images/{{ .file }}" alt="Roxx Mixx Duo" loading="lazy" class="gallery-img" />
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -13,6 +13,8 @@
   </url><url>
     <loc>http://localhost:1313/performances/</loc>
   </url><url>
+    <loc>http://localhost:1313/photos/</loc>
+  </url><url>
     <loc>http://localhost:1313/repertoire/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>

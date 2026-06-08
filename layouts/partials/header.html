@@ -30,7 +30,13 @@
         </li>
         <li>
           <a
-            href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#services"
+            href="{{ .Site.BaseURL }}photos/"
+            >Photos</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ .Site.BaseURL }}#services"
             >What We Provide</a
           >
         </li>
@@ -91,7 +97,14 @@
       </li>
       <li>
         <a
-          href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#services"
+          href="{{ .Site.BaseURL }}photos/"
+          class="mobile-nav-link"
+          >Photos</a
+        >
+      </li>
+      <li>
+        <a
+          href="{{ .Site.BaseURL }}#services"
           class="mobile-nav-link"
           >What We Provide</a
         >
