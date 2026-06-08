@@ -18,14 +18,20 @@
           >
         </li>
         <li>
-          <a href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#repertoire"
+          <a href="{{ .Site.BaseURL }}repertoire/"
             >Repertoire</a
           >
         </li>
         <li>
           <a
-            href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#performances"
+            href="{{ .Site.BaseURL }}performances/"
             >Performances</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#services"
+            >What We Provide</a
           >
         </li>
         <li>
@@ -71,16 +77,23 @@
       </li>
       <li>
         <a
-          href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#repertoire"
+          href="{{ .Site.BaseURL }}repertoire/"
           class="mobile-nav-link"
           >Repertoire</a
         >
       </li>
       <li>
         <a
-          href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#performances"
+          href="{{ .Site.BaseURL }}performances/"
           class="mobile-nav-link"
           >Performances</a
+        >
+      </li>
+      <li>
+        <a
+          href="{{ if not .IsHome }}{{ .Site.BaseURL }}{{ end }}#services"
+          class="mobile-nav-link"
+          >What We Provide</a
         >
       </li>
       <li>

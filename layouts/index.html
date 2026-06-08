@@ -77,11 +77,11 @@
     <div class="credentials-row">
           <div class="credential-item">
             <span class="cred-num">20+</span>
-            <span class="cred-label">Years of Live Stage Experience</span>
+            <span class="cred-label">Years of live experience</span>
           </div>
           <div class="credential-item">
             <span class="cred-num">800+</span>
-            <span class="cred-label">Song Dynamic Repertoire</span>
+            <span class="cred-label">Song Repertoire</span>
           </div>
         </div>
   </div>
@@ -93,7 +93,7 @@
     <div class="section-header text-center">
       <span class="sub-heading">Global Appeal</span>
       <h2 class="section-title">Singing in 20 Languages</h2>
-      <p class="section-subtitle">Stifany & Raul's stunning linguistic versatility allows the duo to connect with audiences of diverse cultures in their native tongues.</p>
+      <p class="section-subtitle">Roxx Mixx Duo's stunning linguistic versatility allows the duo to connect with audiences of diverse cultures in their native tongues.</p>
       <div class="section-divider"></div>
     </div>
   </div>
@@ -117,89 +117,6 @@
           <div class="lang-info">
             <span class="lang-name">{{ .name }}</span>
             <span class="lang-tagline">{{ .highlight }}</span>
-          </div>
-        </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<!-- Dynamic Song Repertoire Database -->
-<section id="repertoire" class="section-padding dark-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="sub-heading">The Backlog</span>
-      <h2 class="section-title">Interactive Song Directory</h2>
-      <p class="section-subtitle">Search their massive library of 800+ covers or filter by genre and language to find your favorites.</p>
-      <div class="section-divider"></div>
-    </div>
-
-    <!-- Search & Filter Module Controls -->
-    <div class="repertoire-controls">
-      <div class="search-bar-wrapper">
-        <i class="fa fa-search search-icon"></i>
-        <input type="text" id="repertoire-search" placeholder="Search by song title, artist, language..." aria-label="Search Songs" />
-        <button id="search-clear-btn" class="clear-btn" aria-label="Clear Search">&times;</button>
-      </div>
-
-      <div class="filter-categories" id="genre-filters">
-        <button class="filter-btn active" data-filter="all">All Genres</button>
-        <button class="filter-btn" data-filter="Rock">Rock</button>
-        <button class="filter-btn" data-filter="Pop">Pop</button>
-        <button class="filter-btn" data-filter="Jazz">Jazz</button>
-        <button class="filter-btn" data-filter="R&B">R&B</button>
-        <button class="filter-btn" data-filter="Country">Country</button>
-        <button class="filter-btn" data-filter="Bachata / Latin">Bachata & Latin</button>
-        <button class="filter-btn" data-filter="Bollywood">Bollywood</button>
-        <button class="filter-btn" data-filter="OPM">OPM</button>
-      </div>
-    </div>
-
-    <!-- Repertoire Grid -->
-    <div class="repertoire-grid" id="repertoire-list">
-      {{ range hugo.Data.repertoire }}
-        <div class="song-card" data-genre="{{ .genre }}" data-language="{{ .language }}" data-title="{{ .title | lower }}" data-artist="{{ .artist | lower }}">
-          <div class="song-header">
-            <span class="song-badge-genre">{{ .genre }}</span>
-            <span class="song-badge-lang">{{ .language }}</span>
-          </div>
-          <h4 class="song-title">{{ .title }}</h4>
-          <p class="song-artist">{{ .artist }}</p>
-        </div>
-      {{ end }}
-    </div>
-    
-    <div id="no-results-msg" class="no-results-alert" style="display: none;">
-      <i class="fa fa-exclamation-circle"></i> No matching songs found. Try adjusting your search query or filters!
-    </div>
-  </div>
-</section>
-
-<!-- YouTube Videos Gallery Section -->
-<section id="performances" class="section-padding midnight-section">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="sub-heading">Live in Action</span>
-      <h2 class="section-title">YouTube Videos</h2>
-      <p class="section-subtitle">Watch performances of Roxx Mixx Duo performing popular songs across various languages and genres.</p>
-      <div class="section-divider"></div>
-    </div>
-
-    <!-- Responsive video card grid -->
-    <div class="shorts-grid">
-      {{ range hugo.Data.videos }}
-        <div class="short-card" data-video-id="{{ .id }}">
-          <div class="short-frame">
-            <div class="short-thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" class="short-thumb" loading="lazy" />
-              <div class="play-overlay">
-                <i class="fa fa-play-circle-o play-icon"></i>
-              </div>
-            </div>
-            <div class="short-details">
-              <span class="short-label">{{ .language }} | {{ .genre }}</span>
-              <h4 class="short-title">{{ .title }}</h4>
-            </div>
           </div>
         </div>
       {{ end }}

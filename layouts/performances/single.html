@@ -1,0 +1,93 @@
+{{ define "main" }}
+
+<!-- YouTube Videos Gallery Section -->
+<section id="performances" class="section-padding midnight-section" style="padding-top: 140px;">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Live in Action</span>
+      <h2 class="section-title">YouTube Videos</h2>
+      <p class="section-subtitle">Watch performances of Roxx Mixx Duo performing popular songs across various languages and genres.</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="shorts-grid">
+      {{ range hugo.Data.videos }}
+        <div class="short-card" data-video-id="{{ .id }}">
+          <div class="short-frame">
+            <div class="short-thumbnail-wrapper">
+              <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" class="short-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <i class="fa fa-play-circle-o play-icon"></i>
+              </div>
+            </div>
+            <div class="short-details">
+              <span class="short-label">{{ .language }} | {{ .genre }}</span>
+              <h4 class="short-title">{{ .title }}</h4>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- YouTube Shorts Section -->
+<section id="shorts" class="section-padding dark-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Bite-Sized Clips</span>
+      <h2 class="section-title">YouTube Shorts</h2>
+      <p class="section-subtitle">Quick clips from Roxx Mixx Duo.</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="yt-shorts-grid">
+      {{ range hugo.Data.shorts }}
+        <div class="short-card" data-video-id="{{ .id }}">
+          <div class="short-frame short-frame--portrait">
+            <div class="short-thumbnail-wrapper">
+              <img src="https://img.youtube.com/vi/{{ .id }}/hqdefault.jpg" alt="{{ .title }}" class="short-thumb" loading="lazy" />
+              <div class="play-overlay">
+                <i class="fa fa-play-circle-o play-icon"></i>
+              </div>
+            </div>
+            <div class="short-details">
+              <h4 class="short-title">{{ .title }}</h4>
+            </div>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Photo Gallery Section -->
+<section id="gallery" class="section-padding midnight-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Behind the Scenes</span>
+      <h2 class="section-title">Photo Gallery</h2>
+      <p class="section-subtitle">Moments captured from our performances and events.</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-grid">
+      {{ range hugo.Data.gallery }}
+        <div class="gallery-item">
+          <img src="/images/{{ .file }}" alt="Roxx Mixx Duo" loading="lazy" class="gallery-img" />
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Universal Video Modal Overlay -->
+<div class="video-modal-overlay" id="video-modal">
+  <button class="modal-close-btn" id="modal-close" aria-label="Close Player">&times;</button>
+  <div class="video-modal-container">
+    <div class="iframe-wrapper">
+      <iframe src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="modal-iframe"></iframe>
+    </div>
+  </div>
+</div>
+
+{{ end }}

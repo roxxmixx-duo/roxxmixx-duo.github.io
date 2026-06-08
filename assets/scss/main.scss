@@ -229,7 +229,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-white);
   background: linear-gradient(45deg, var(--text-white), var(--text-silver));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .nav-desktop .nav-links {
@@ -415,8 +417,9 @@ h1, h2, h3, h4, h5, h6 {
 .highlight-purple {
   background: linear-gradient(135deg, #a855f7, var(--pink-neon));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 10px rgba(138, 43, 226, 0.3));
+  display: inline-block;
 }
 
 .hero-subtitle {
@@ -566,12 +569,18 @@ h1, h2, h3, h4, h5, h6 {
     width: clamp(200px, 65vw, 340px);
     order: 0;
     margin-right: 0;
-    margin-bottom: -20px;
+    margin-bottom: 24px;
     align-self: center;
   }
 
   .hero-photo-fade-left {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-attachment: scroll;
   }
 }
 
