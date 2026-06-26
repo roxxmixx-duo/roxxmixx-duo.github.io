@@ -209,6 +209,30 @@
             />
           </div>
           <div class="form-group">
+            <label for="email_confirm">Confirm Email <span class="required">*</span></label>
+            <input
+              type="email"
+              id="email_confirm"
+              name="_email_confirm"
+              placeholder="yourname@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="04xx xxx xxx"
+              autocomplete="tel"
+            />
+          </div>
+          <div class="form-group">
             <label for="event_type">Event Type <span class="required">*</span></label>
             <select id="event_type" name="event_type" required>
               <option value="" disabled selected>Select event type…</option>
@@ -249,6 +273,26 @@
           </button>
         </div>
       </form>
+
+      <script>
+        (function () {
+          var form = document.getElementById('booking-form');
+          form.addEventListener('submit', function (e) {
+            var email = document.getElementById('email').value;
+            var confirm = document.getElementById('email_confirm').value;
+            if (email !== confirm) {
+              e.preventDefault();
+              document.getElementById('email_confirm').setCustomValidity('Emails do not match.');
+              document.getElementById('email_confirm').reportValidity();
+            } else {
+              document.getElementById('email_confirm').setCustomValidity('');
+            }
+          });
+          document.getElementById('email_confirm').addEventListener('input', function () {
+            this.setCustomValidity('');
+          });
+        })();
+      </script>
 
       <div class="booking-form-alt">
         <p>Or reach us directly:</p>
