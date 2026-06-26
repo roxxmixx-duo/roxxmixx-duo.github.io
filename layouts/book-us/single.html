@@ -1,0 +1,107 @@
+{{ define "main" }}
+
+<section class="booking-form-section section-padding dark-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="sub-heading">Get In Touch</span>
+      <h2 class="section-title">Book Roxx Mixx Duo</h2>
+      <p class="section-subtitle">{{ .Params.description }}</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="booking-form-wrap">
+      {{ if eq .Site.Params.formspree_id "YOUR_FORMSPREE_ID" }}
+      <div class="booking-form-notice">
+        <i class="fa fa-exclamation-triangle"></i>
+        <strong>Setup required:</strong> Create a free account at <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>, create a form targeting <strong>roxxmixx.duo@gmail.com</strong>, then replace <code>YOUR_FORMSPREE_ID</code> in <code>hugo.toml</code> with your form ID.
+      </div>
+      {{ end }}
+
+      <form
+        action="https://formspree.io/f/{{ .Site.Params.formspree_id }}"
+        method="POST"
+        class="booking-form"
+        id="booking-form"
+      >
+        <input type="hidden" name="_subject" value="New Booking Enquiry – Roxx Mixx Duo" />
+        <input type="hidden" name="_next" value="{{ .Site.BaseURL }}book-us/thanks/" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Your Email <span class="required">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="yourname@example.com"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="event_type">Event Type <span class="required">*</span></label>
+            <select id="event_type" name="event_type" required>
+              <option value="" disabled selected>Select event type…</option>
+              <option value="Wedding / Reception">Wedding / Reception</option>
+              <option value="Birthday Party">Birthday Party</option>
+              <option value="Corporate Event / Gala">Corporate Event / Gala</option>
+              <option value="Cultural / Community Event">Cultural / Community Event</option>
+              <option value="Festival / Public Event">Festival / Public Event</option>
+              <option value="Restaurant / Bar / Venue">Restaurant / Bar / Venue</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="event_date">Date of Event <span class="required">*</span></label>
+          <input
+            type="date"
+            id="event_date"
+            name="event_date"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell Us About Your Event</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Venue, expected guest count, any special requests or song dedications…"
+          ></textarea>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="btn btn-cta-pulse booking-submit-btn">
+            <i class="fa fa-paper-plane"></i> Send Enquiry
+          </button>
+        </div>
+      </form>
+
+      <div class="booking-form-alt">
+        <p>Or reach us directly:</p>
+        <div class="cta-contacts-grid">
+          <div class="cta-contact-box">
+            <i class="fa fa-phone"></i>
+            <span>Call Marie</span>
+            <strong><a href="tel:{{ replace .Site.Params.phone " " "" }}">{{ .Site.Params.phone }}</a></strong>
+          </div>
+          <div class="cta-contact-box">
+            <i class="fa fa-envelope"></i>
+            <span>Email Us</span>
+            <strong><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></strong>
+          </div>
+          <div class="cta-contact-box">
+            <i class="fa fa-facebook-square"></i>
+            <span>Facebook</span>
+            <strong><a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener">Message Us</a></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
