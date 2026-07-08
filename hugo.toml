@@ -16,6 +16,10 @@ youtube = "https://youtube.com/@stifanychung2028"
 email = "mailto:roxxmixx.duo@gmail.com"
 facebook = "https://www.facebook.com/roxxmixx.duo/"
 
+[services]
+  [services.googleAnalytics]
+    id = "G-K0YTR2R5VG"
+
 [markup]
 [markup.goldmark]
 [markup.goldmark.renderer]
