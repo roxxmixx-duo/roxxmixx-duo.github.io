@@ -1,48 +1,71 @@
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-  <meta name="description" content="{{ .Params.description | default .Site.Params.description }}" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <title>
+    {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title
+    }}{{ end }}
+  </title>
+  <meta
+    name="description"
+    content="{{ .Params.description | default .Site.Params.description }}"
+  />
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
 
   <!-- Hugo Pipes CSS compilation -->
   {{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" />
+  <link
+    rel="stylesheet"
+    href="{{ $style.RelPermalink }}"
+    integrity="{{ $style.Data.Integrity }}"
+    crossorigin="anonymous"
+  />
 
   <!-- Hugo Pipes JS compilation -->
   {{ $script := resources.Get "js/main.js" | minify | fingerprint }}
-  <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  <script
+    src="{{ $script.RelPermalink }}"
+    integrity="{{ $script.Data.Integrity }}"
+    crossorigin="anonymous"
+    defer
+  ></script>
 
   <!-- JSON-LD MusicGroup Structured Schema Markup -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MusicGroup",
-    "name": "Roxx Mixx Duo",
-    "description": "Melbourne's premier multilingual cover band playing Rock, Pop, R&B, Jazz, Country, and Bachata in over 18 languages.",
-    "url": "{{ .Site.BaseURL }}",
-    "genre": ["Pop", "Rock", "R&B", "Jazz", "Country", "Latin"],
-    "musicGroupMember": [
-      {
-        "@type": "Person",
-        "name": "Raul Roxas"
-      },
-      {
-        "@type": "Person",
-        "name": "Stifany Chung"
-      }
-    ],
-    "sameAs": [
-      "{{ .Site.Params.social.facebook }}"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Roxx Mixx Duo",
+      "description": "Melbourne's premier multilingual cover band playing Rock, Pop, R&B, Jazz, Country, and Bachata in over 18 languages.",
+      "url": "{{ .Site.BaseURL }}",
+      "genre": ["Pop", "Rock", "R&B", "Jazz", "Country", "Latin"],
+      "musicGroupMember": [
+        {
+          "@type": "Person",
+          "name": "Raul Roxas"
+        },
+        {
+          "@type": "Person",
+          "name": "Stifany Chung"
+        }
+      ],
+      "sameAs": ["{{ .Site.Params.social.facebook }}"]
+    }
   </script>
   {{ template "_internal/google_analytics.html" . }}
 </head>

@@ -210,6 +210,13 @@
           <span>Email Us</span>
           <strong><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></strong>
         </div>
+        {{ if .Site.Params.social.facebook }}
+        <div class="cta-contact-box">
+          <i class="fa fa-facebook-official"></i>
+          <span>Message Us</span>
+          <strong><a href="{{ .Site.Params.social.facebook }}" target="_blank" rel="noopener">Facebook</a></strong>
+        </div>
+        {{ end }}
       </div>
     </div>
   </div>
