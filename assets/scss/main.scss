@@ -1323,11 +1323,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-contacts-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   border-top: 1px solid var(--border-glass);
   padding-top: 40px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -1430,6 +1430,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- Booking Form --- */
+.booking-availability-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(255, 183, 3, 0.15), rgba(255, 183, 3, 0.05));
+  border: 2px solid var(--gold-neon);
+  border-radius: 16px;
+  padding: 28px 40px;
+  margin-bottom: 48px;
+  color: var(--gold-neon);
+  font-size: 1.4rem;
+  font-family: var(--font-headers);
+  letter-spacing: 0.04em;
+  text-align: center;
+  box-shadow: 0 0 32px var(--gold-glow), inset 0 0 24px rgba(255, 183, 3, 0.05);
+
+  i {
+    font-size: 2rem;
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 8px var(--gold-neon));
+  }
+
+  strong {
+    color: var(--text-white);
+    font-size: 1.6rem;
+  }
+}
+
 .booking-form-section {
   min-height: calc(100vh - 80px);
 }

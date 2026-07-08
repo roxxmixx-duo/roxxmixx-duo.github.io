@@ -45,95 +45,91 @@ document.addEventListener('DOMContentLoaded', () => {
      3. Client-Side Song Search & Filtering (Repertoire)
      ============================================================ */
   const searchInput = document.getElementById('repertoire-search');
-  const clearBtn = document.getElementById('search-clear-btn');
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const langFilterBtns = document.querySelectorAll('.lang-filter-btn');
-  const songCards = document.querySelectorAll('.song-card');
-  const noResultsMsg = document.getElementById('no-results-msg');
 
-  let activeGenre = 'all';
-  let activeLanguage = 'all';
-  let searchQuery = '';
+  if (searchInput) {
+    const clearBtn = document.getElementById('search-clear-btn');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const langFilterBtns = document.querySelectorAll('.lang-filter-btn');
+    const songCards = document.querySelectorAll('.song-card');
+    const noResultsMsg = document.getElementById('no-results-msg');
 
-  const filterSongs = () => {
-    let visibleCount = 0;
+    let activeGenre = 'all';
+    let activeLanguage = 'all';
+    let searchQuery = '';
 
-    songCards.forEach(card => {
-      const cardGenre = card.getAttribute('data-genre');
-      const cardLanguage = card.getAttribute('data-language').toLowerCase();
-      const cardTitle = card.getAttribute('data-title');
-      const cardArtist = card.getAttribute('data-artist');
+    const filterSongs = () => {
+      let visibleCount = 0;
 
-      const matchesGenre = (activeGenre === 'all' || cardGenre === activeGenre);
-      const matchesLanguage = (activeLanguage === 'all' || cardLanguage === activeLanguage.toLowerCase());
+      songCards.forEach(card => {
+        const cardGenre = card.getAttribute('data-genre');
+        const cardLanguage = card.getAttribute('data-language').toLowerCase();
+        const cardTitle = card.getAttribute('data-title');
+        const cardArtist = card.getAttribute('data-artist');
 
-      const matchesSearch = searchQuery === '' ||
-        cardTitle.includes(searchQuery) ||
-        cardArtist.includes(searchQuery) ||
-        cardLanguage.includes(searchQuery) ||
-        cardGenre.toLowerCase().includes(searchQuery);
+        const matchesGenre = (activeGenre === 'all' || cardGenre === activeGenre);
+        const matchesLanguage = (activeLanguage === 'all' || cardLanguage === activeLanguage.toLowerCase());
 
-      if (matchesGenre && matchesLanguage && matchesSearch) {
-        card.style.display = 'block';
-        visibleCount++;
+        const matchesSearch = searchQuery === '' ||
+          cardTitle.includes(searchQuery) ||
+          cardArtist.includes(searchQuery) ||
+          cardLanguage.includes(searchQuery) ||
+          cardGenre.toLowerCase().includes(searchQuery);
+
+        if (matchesGenre && matchesLanguage && matchesSearch) {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResultsMsg.style.display = 'block';
       } else {
-        card.style.display = 'none';
+        noResultsMsg.style.display = 'none';
       }
+    };
+
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+
+      if (searchQuery.length > 0) {
+        clearBtn.style.display = 'block';
+      } else {
+        clearBtn.style.display = 'none';
+      }
+
+      filterSongs();
     });
 
-    // Toggle no results alert message
-    if (visibleCount === 0) {
-      noResultsMsg.style.display = 'block';
-    } else {
-      noResultsMsg.style.display = 'none';
-    }
-  };
-
-  // Event: Search Input change
-  searchInput.addEventListener('input', (e) => {
-    searchQuery = e.target.value.toLowerCase().trim();
-    
-    // Toggle Clear button visibility
-    if (searchQuery.length > 0) {
-      clearBtn.style.display = 'block';
-    } else {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
       clearBtn.style.display = 'none';
-    }
-
-    filterSongs();
-  });
-
-  // Event: Clear search button clicked
-  clearBtn.addEventListener('click', () => {
-    searchInput.value = '';
-    searchQuery = '';
-    clearBtn.style.display = 'none';
-    filterSongs();
-    searchInput.focus();
-  });
-
-  // Event: Genre category filters clicked
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from old active, set on new clicked
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      activeGenre = btn.getAttribute('data-filter');
       filterSongs();
+      searchInput.focus();
     });
-  });
 
-  // Event: Language filters clicked
-  langFilterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      langFilterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-      activeLanguage = btn.getAttribute('data-filter');
-      filterSongs();
+        activeGenre = btn.getAttribute('data-filter');
+        filterSongs();
+      });
     });
-  });
+
+    langFilterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langFilterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        activeLanguage = btn.getAttribute('data-filter');
+        filterSongs();
+      });
+    });
+  }
 
   /* ============================================================
      4. Dynamic YouTube Shorts Overlay Modal Player

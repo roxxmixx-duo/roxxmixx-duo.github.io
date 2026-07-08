@@ -9,6 +9,11 @@
       <div class="section-divider"></div>
     </div>
 
+    <div class="booking-availability-banner">
+      <i class="fa fa-calendar-check-o"></i>
+      <span>Now taking bookings for <strong>2026 &amp; 2027</strong></span>
+    </div>
+
     <div class="booking-form-wrap">
       {{ if eq .Site.Params.formspree_id "YOUR_FORMSPREE_ID" }}
       <div class="booking-form-notice">
@@ -83,6 +88,7 @@
             type="date"
             id="event_date"
             name="event_date"
+            value="2027-01-03"
             required
           />
         </div>
